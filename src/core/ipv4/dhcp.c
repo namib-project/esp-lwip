@@ -456,7 +456,7 @@ dhcp_select(struct netif *netif)
     options_out_len = dhcp_option_hostname(options_out_len, msg_out->options, netif);
 #endif /* LWIP_NETIF_HOSTNAME */
 
-if LWIP_DHCP_MUD_URL
+#if LWIP_DHCP_MUD_URL
     options_out_len = dhcp_option_mud_url(options_out_len, msg_out->options, LWIP_MUD_URL_STRING);
 #endif /* LWIP_DHCP_MUD_URL */
 
