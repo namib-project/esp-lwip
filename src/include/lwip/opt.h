@@ -972,6 +972,13 @@
 #if !defined LWIP_DHCP_MAX_DNS_SERVERS || defined __DOXYGEN__
 #define LWIP_DHCP_MAX_DNS_SERVERS       DNS_MAX_SERVERS
 #endif
+
+/**
+ * LWIP_DHCP_MUD_URL == 1: Emit MUD URL (RFC 8520) via DHCP.
+ */
+#if !defined LWIP_DHCP_MUD_URL || defined __DOXYGEN__
+#define LWIP_DHCP_MUD_URL               0
+#endif
 /**
  * @}
  */
@@ -2776,6 +2783,13 @@
  */
 #if !defined LWIP_DHCP6_MAX_DNS_SERVERS || defined __DOXYGEN__
 #define LWIP_DHCP6_MAX_DNS_SERVERS      DNS_MAX_SERVERS
+#endif
+
+/**
+ * LWIP_DHCP6_MUD_URL == 1: Emit MUD URL (RFC 8520) via DHCPv6.
+ */
+#if !defined LWIP_DHCP6_MUD_URL || defined __DOXYGEN__
+#define LWIP_DHCP6_MUD_URL              0
 #endif
 /**
  * @}
