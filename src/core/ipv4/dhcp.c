@@ -233,6 +233,9 @@ static u16_t dhcp_option_long(u16_t options_out_len, u8_t *options, u32_t value)
 #if LWIP_NETIF_HOSTNAME
 static u16_t dhcp_option_hostname(u16_t options_out_len, u8_t *options, struct netif *netif);
 #endif /* LWIP_NETIF_HOSTNAME */
+#if LWIP_DHCP_MUD_URL
+static u16_t dhcp_option_mud_url(u16_t options_out_len, u8_t *options, char *mud_url)
+#endif /* LWIP_DHCP_MUD_URL */
 #if ESP_DHCP && !ESP_DHCP_DISABLE_CLIENT_ID
 static u16_t dhcp_option_client_id(struct netif *netif, struct dhcp_msg *msg_out, u16_t options_out_len);
 #endif /* ESP_DHCP && !ESP_DHCP_DISABLE_CLIENT_ID */
