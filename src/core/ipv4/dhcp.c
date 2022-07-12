@@ -1791,7 +1791,7 @@ dhcp_option_mud_url(u16_t options_out_len, u8_t *options, char *mud_url)
     LWIP_ASSERT("DHCP: MUD URL is too long!", mud_url_len <= available);
     len = LWIP_MIN(mud_url_len, available);
     LWIP_ASSERT("DHCP: MUD URL is too long!", len < 254);
-    options_out_len = dhcp_option(options_out_len, options, DHCP_OPTION_MUD_URL, (u8_t)len);
+    options_out_len = dhcp_option(options_out_len, options, DHCP_OPTION_MUD_URL_V4, (u8_t)len);
     while (len--) {
       options_out_len = dhcp_option_byte(options_out_len, options, *p++);
     }
